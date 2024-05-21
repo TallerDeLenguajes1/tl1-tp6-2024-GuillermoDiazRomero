@@ -122,7 +122,6 @@ Console.WriteLine("5.Cos(x)");
 Console.WriteLine("6.Parte entera");
 
 Console.WriteLine("$$$Ingrese su opcion$$$");
-int eleccion = 0;
 string texto;
 bool resultado;
 do
@@ -169,29 +168,29 @@ switch (eleccion)
 }
 
 Console.WriteLine("Ingrese dos numero para saber el maximo y el minimo");
-int numero1;
-int numero2;
+int numero1max;
+int numero2max;
 do
 {
     texto = Console.ReadLine();
-    resultado = int.TryParse(texto, out numero1);
+    resultado = int.TryParse(texto, out numero1max);
 
-} while (!resultado || numero1 < 1);
+} while (!resultado || numero1max < 1);
 
 do
 {
     texto = Console.ReadLine();
-    resultado = int.TryParse(texto, out numero2);
+    resultado = int.TryParse(texto, out numero2max);
 
-} while (!resultado || numero2 < 1);
+} while (!resultado || numero2max < 1);
 
 
-if (numero1 > numero2){
-    Console.WriteLine($"El numero 1 ({numero1}) es mayor que el numero 2 ({numero2})");
+if (numero1max > numero2max){
+    Console.WriteLine($"El numero 1 ({numero1max}) es mayor que el numero 2 ({numero2max})");
 }
-else if (numero1 < numero2){
-    Console.WriteLine($"El numero 1 ({numero1}) es menor que el numero 2 ({numero2})");
+else if (numero1max < numero2max){
+    Console.WriteLine($"El numero 1 ({numero1max}) es menor que el numero 2 ({numero2max})");
 }
 else{
-    Console.WriteLine($"El numero 1 ({numero1}) es igual que el numero 2 ({numero2})");
+    Console.WriteLine($"El numero 1 ({numero1max}) es igual que el numero 2 ({numero2max})");
 }
